@@ -351,8 +351,6 @@ body {
 
 .card {
   width: 350px;
-  -webkit-transition: opacity 0.2s ease-in;
-  transition: opacity 0.2s ease-in;
   color: #000;
   /* Tablet */
   /* Mobile */
@@ -379,6 +377,8 @@ body {
   height: 220px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
   /* Tablet */
   /* Mobile */
   /* Mobile XS */
@@ -401,6 +401,12 @@ body {
     width: 290px;
     height: 180px;
   }
+}
+.card img:hover, .card img:focus {
+  opacity: 0.8;
+}
+.card img:active {
+  opacity: 0.5;
 }
 .card h4 {
   font-size: 24px;
@@ -504,12 +510,6 @@ body {
   .card:nth-child(-n+2) p {
     font-size: 14px;
   }
-}
-.card:hover, .card:focus {
-  opacity: 0.8;
-}
-.card:active {
-  opacity: 0.5;
 }
 
 .toggle-menu {
