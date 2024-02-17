@@ -1,0 +1,75 @@
+.toggle-menu  {
+    width: 40px;
+    height: 25px;
+
+    display: flex;
+	justify-content: center;
+	align-items: center;
+
+    cursor: pointer;
+
+    z-index: 6;
+}
+
+.toggle-menu span {
+    position: relative;
+    width: 40px;
+    height: 5px;
+    background-color: #000;
+
+    &::before {
+        content: "";
+    
+        position: absolute;
+        top: -10px;
+        left: 0;
+    
+        width: 40px;
+        height: 5px;
+        background-color: #000;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+
+    &::after {
+        content: "";
+    
+        position: absolute;
+        top: 10px;
+        left: 0;
+    
+        width: 40px;
+        height: 5px;
+        background-color: #000;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    }
+}
+
+/* Active state */
+
+.toggle-menu.active span{
+    background-color: transparent;
+}
+
+.toggle-menu.active span::before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.toggle-menu.active span::after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
